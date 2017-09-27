@@ -1,17 +1,17 @@
-@font-face{
-    font-family: HelveticaR;
-    src: url(fonts/Helvetica_Regular.ttf);
+﻿@font-face{
+    	font-family: HelveticaR;
+    	src: url(fonts/Helvetica_Regular.ttf);
     }
 
 @font-face{
-    font-family: HelveticaT;
-    src: url(fonts/Helvetica_Thin.otf);
+   	 font-family: HelveticaT;
+    	src: url(fonts/Helvetica_Thin.otf);
     }
 
 html, body {
-    margin: 0;
-    padding: 0;
-    background-color: #F1F1F1;
+    	margin: 0;
+    	padding: 0;
+    	background-color: #F1F1F1;
     }
 
 .header_page {
