@@ -1,18 +1,31 @@
 ﻿@font-face{
-    	font-family: HelveticaR;
-    	src: url(fonts/Helvetica_Regular.ttf);
-    }
+    font-family: HelveticaR;
+    src: url(fonts/HelveticaRegular.ttf) format('truetype'); 
+}
 
 @font-face{
-   	 font-family: HelveticaT;
-    	src: url(fonts/Helvetica_Thin.otf);
-    }
+   	font-family: HelveticaT;
+    src: url(fonts/HelveticaThin.ttf) format('truetype');
+}
+
+
+@font-face{
+   	font-family: HelveticaBI;
+    src: url(fonts/HelveticaBoldItalic.ttf) format('truetype');
+}
+
+@font-face{
+   	font-family: HelveticaB;
+    src: url(fonts/Helvetica_Bold.ttf);
+}
+
+
 
 html, body {
-    	margin: 0;
-    	padding: 0;
-    	background-color: #F1F1F1;
-    }
+    margin: 0;
+    padding: 0;
+    background-color: #F1F1F1;
+}
 
 .header {
 	height: 250px;
@@ -39,10 +52,10 @@ html, body {
 .header__title{ 
 	position: relative;
 	color: #FFFFFF;
-	font-size: 60px;
+	font-size: 80px;
 	font-style: normal;
 	font-family: HelveticaT;
-	z-index: 100;
+	
 }
 
 .menu {
@@ -56,7 +69,7 @@ html, body {
 }
 
 .menu a {
-	color: #C1C1C1;
+	color: #FFFFFF;
 	font-size: 20px;
 	font-family: HelveticaR;
 	display: flex;
@@ -68,21 +81,19 @@ html, body {
 	width: 25%;
 	text-decoration: none;
 	vertical-align: middle;
-	border-top: 2px solid rgba(255,255,255,0);
-	border-bottom: 2px solid rgba(255,255,255,0);
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
 }
 
 .menu a:hover {
-	color: #F0F0F0;
-	border-top: 2px solid rgba(255,255,255,1);
+	color: #05253A;
+	background-color: #FFFFFF;
 	transition: 0.5s;
+
 }
 
 .byography, 
 .learning, 
 .projects {
-	height: 1000px;
-	border: 1px solid black;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -93,14 +104,33 @@ html, body {
 .byography__block,
 .learning__courses,
 .learning__other,  
-.learning__english,
-.projects__project {
-	margin: 20px;
+.learning__english {
+	margin: 30px;
 	padding: 10px 20px 10px 40px;
 	background-color: #FFFFFF;
 	border-radius: 8px;
 	box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 	font-family: HelveticaR;
+}
+
+.section-title {
+	font-family: HelveticaBI;
+	font-size: 60px;
+	text-align: center;
+	background-color: #565656;
+  	color: transparent;
+  	text-shadow: 0px 2px 3px rgba(255,255,255,0.6);
+  	-webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;
+}
+
+.section-line {
+	border: none;
+	width: 90%;
+	background-color: #C1C1C1;
+	height: 1px;
+	opacity: 0.5;
 }
 
 .byography__block {
@@ -110,7 +140,10 @@ html, body {
 .byography__photo {
 	width: 315px;
 	height: 405px;
+	margin: 20px;
 	border-radius: 8px;
+	pointer-events: none;
+	user-select: none;
 }
 
 .byography__title,
@@ -172,7 +205,13 @@ html, body {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
+	transition: transform 0.8s;
 }
+
+.skill-1:hover {
+	transform: translate(10px, 0px);
+}
+
 
 .skill-11, .skill-21, .skill-31, .skill-41, .skill-51, .skill-61 {
 	background-color: #05253A;
@@ -232,8 +271,14 @@ html, body {
 }
 
 .projects__project {
-	width: 35%;
+	margin: 30px;
+	padding: 10px;
+	background-color: #FFFFFF;
+	border-radius: 8px;
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 	font-family: HelveticaR;
+	width: 35%;
+	text-align: center;
 }
 
 .projects__title {
@@ -241,6 +286,32 @@ html, body {
 	color: #0D5587;
 	font-style: normal;
 }
+
+.project-1, .project-2, .project-4 {
+	width: 350px;
+	height: 300px;
+	pointer-events: none;
+	user-select: none;
+	border-radius: 8px;
+	filter: grayscale(100%) blur(5px);
+}
+
+.project-3 {
+	width: 400px;
+	height: 300px;
+	pointer-events: none;
+	user-select: none;
+	filter: grayscale(100%) blur(5px);
+}
+
+.projects__project:hover .project-1,
+.projects__project:hover .project-2,
+.projects__project:hover .project-3,
+.projects__project:hover .project-4 {
+	transition: 0.5s;
+	filter: grayscale(0%) blur(0px);
+}
+	
 
 .footer {
 	display: flex;
@@ -251,16 +322,18 @@ html, body {
 	background-color: #05253A;
 }
 
+
 .footer table {
 	width: 70%;
 }
 
-.footer table td{
+.footer table tr td{
 	color: white;
 	font-family: HelveticaR;
 	font-size: 18px;
 	text-align: center;
 	padding: 5px;
 }
+
 
 
