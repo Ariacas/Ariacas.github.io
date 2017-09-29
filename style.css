@@ -14,7 +14,7 @@ html, body {
     	background-color: #F1F1F1;
     }
 
-.header_page {
+.header {
 	height: 250px;
 	width: 100%
 	position: absolute;
@@ -23,7 +23,7 @@ html, body {
 	background-color: #086AAA;
 }
 
-.overlay {
+.header__overlay {
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -36,7 +36,7 @@ html, body {
 	opacity: 0.5;
 }
 
-.main_title{ 
+.header__title{ 
 	position: relative;
 	color: #FFFFFF;
 	font-size: 60px;
@@ -45,7 +45,7 @@ html, body {
 	z-index: 100;
 }
 
-.menu_page {
+.menu {
 	height: 50px;
 	width: 100%
 	position: absolute;
@@ -55,8 +55,8 @@ html, body {
 	background-color: #05253A;
 }
 
-.menu_page a {
-	color: #F0F0F0;
+.menu a {
+	color: #C1C1C1;
 	font-size: 20px;
 	font-family: HelveticaR;
 	display: flex;
@@ -72,19 +72,15 @@ html, body {
 	border-bottom: 2px solid rgba(255,255,255,0);
 }
 
-.menu_page a:hover {
+.menu a:hover {
+	color: #F0F0F0;
 	border-top: 2px solid rgba(255,255,255,1);
-	border-bottom: 2px solid rgba(255,255,255,1);
 	transition: 0.5s;
 }
 
-.menu_page a:mouseout {
-	border-top: 2px solid rgba(255,255,255,0);
-	border-bottom: 2px solid rgba(255,255,255,0);
-	transition: 0.5s;
-}
-
-section {
+.byography, 
+.learning, 
+.projects {
 	height: 1000px;
 	border: 1px solid black;
 	display: flex;
@@ -94,73 +90,177 @@ section {
 	flex-wrap: wrap;
 }
 
-section div{
+.byography__block,
+.learning__courses,
+.learning__other,  
+.learning__english,
+.projects__project {
 	margin: 20px;
-	padding: 10px 10px 10px 40px;
+	padding: 10px 20px 10px 40px;
 	background-color: #FFFFFF;
 	border-radius: 8px;
 	box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-}
-
-.photo {
-	width: 200px;
-	height: 257px;
-	background: url(pic/I_am.jpg) 100% 100% no-repeat;
-	background-color: #FFFFFF;
-	background-size: cover;
-
-}
-
-.byography{
-	width: 60%;
 	font-family: HelveticaR;
 }
 
-.byography_title, .learning_title, .other_title, .english_title {
-	font-size: 30px;
+.byography__block {
+	width: 60%;
+}
+
+.byography__photo {
+	width: 315px;
+	height: 405px;
+	border-radius: 8px;
+}
+
+.byography__title,
+.learning__title {
+	font-size: 33px;
 	color: #0D5587;
 	font-style: normal;
 }
 
-.byography_description, .learning_description, .other_description, .english_description {
+.byography__description,
+.learning__description {
 	font-size: 20px;
 	color: #000000;
 	line-height: 2;
 }
 
-.learning{ 
+
+.learning__courses{ 
 	width: 30%;
-	font-family: HelveticaR;
 }
 
-.learning_description li, .other_description li {
+.learning__description li{
 	list-style-type: none;
 }
 
-.learning_description li:before {
+.learning__description li:before {
 	content: "→";
 }
 
-.learning_description li a{
+.learning__description li a{
 	text-decoration: none;
 	cursor: pointer;
 }
 
-.other, .english {
-	width: 20%;
+.learning__other{
+	width: 50%;
 	font-family: HelveticaR;
 }
 
-
-.project_1, .project_2, .project_3, .project_4 {
-	width: 40%;
+.learning__english{
+	width: 30%;
 	font-family: HelveticaR;
 }
 
-.project_title {
+.learning__other table {
+	width: 100%;
+	font-size: 20px;
+}
+
+.learning__other table tr td{
+	padding: 5px;
+}
+
+.skill-1, .skill-2, .skill-3, .skill-4, .skill-5, .skill-6 {
+	width: 230px;
+	height: 10px;
+	border: 1px solid #05253A;
+	border-radius: 3px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.skill-11, .skill-21, .skill-31, .skill-41, .skill-51, .skill-61 {
+	background-color: #05253A;
+	border-right: 1px solid #F1F1F1;
+}
+
+.skill-12, .skill-22, .skill-32, .skill-42, .skill-52, .skill-62 {
+	background-color: #0D5587;
+}
+
+.skill-11 {
+	width: 75%;
+}
+
+.skill-12 {
+	width: 25%;
+}
+
+.skill-21 {
+	width: 81%;
+}
+
+.skill-22 {
+	width: 19%;
+}
+
+.skill-31 {
+	width: 68%;
+}
+
+.skill-32 {
+	width: 32%;
+}
+
+.skill-41 {
+	width: 74%;
+}
+
+.skill-42 {
+	width: 26%;
+}
+
+.skill-51 {
+	width: 47%;
+}
+
+.skill-52 {
+	width: 53%;
+}
+
+.skill-61 {
+	width: 74%;
+}
+
+.skill-62 {
+	width: 26%;
+}
+
+.projects__project {
+	width: 35%;
+	font-family: HelveticaR;
+}
+
+.projects__title {
 	font-size: 30px;
 	color: #0D5587;
 	font-style: normal;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
+	width: 100%;
+	background-color: #05253A;
+}
+
+.footer table {
+	width: 70%;
+}
+
+.footer table td{
+	color: white;
+	font-family: HelveticaR;
+	font-size: 18px;
+	text-align: center;
+	padding: 5px;
 }
 
 

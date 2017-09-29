@@ -8,72 +8,134 @@
 		<script type = "text/javascript" src = "js/script.js"></script>
 	</head>
 	<body>
-		<header class = "header_page">
-			<div class = "overlay">
-				<p class = "main_title">Сергей Левашев</p>
+		<header class = "header">
+			<div class = "header header__overlay">
+				<p class = "header__title">Сергей Левашев</p>
 			</div>
 		</header>
-		<nav class = "menu_page" id = "nav">
+		<nav class = "menu" id = "nav">
 			<a href = "#byography"><p>Биография</p></a>
 			<a href = "#learning"><p>Навыки</p></a>
 			<a href = "#projects"><p>Разработка</p></a>
 			<a href = "#contacts"><p>Контакты</p></a>
 		</nav>
-		<section id = "byography">
-			<div class = "photo"></div>
-			<div class = "byography"> 
-				<p class = "byography_title">Биография</p>
-				<p class = "byography_description">
+		<section class = "byography" id = "byography">
+			<img class = "byography__photo" src = "pic/I_am.jpg" />
+			<div class = "byography__block"> 
+				<p class = "byography__title">Биография</p>
+				<p class = "byography__description">
 					Окончил ИТА ЮФУ в 2015г. по специальности: "прикладная математика и информатика". Диплом с отличием. 
 				</p>
-				<p class = "byography_title">Сейчас</p>
-				<p class = "byography_description">
+				<p class = "byography__title">Сейчас</p>
+				<p class = "byography__description">
 					В настоящее время обучаюсь в ИТА ЮФУ в аспирантуре по специальности "Информатика и вычислительная техника", кафедра Высшей Математики. Занимаюсь подготовкой кандидатской диссертации.
 				</p>
 			</div>
 		</section>
-		<section id = "learning">
-			<div class = "learning">
-				<p class = "learning_title"> Курсы </p>
-				<ul class = "learning_description">
+		<section class = "learning" id = "learning">
+			<div class = "learning__courses">
+				<p class = "learning__title"> Курсы </p>
+				<ul class = "learning__description">
 					<li> HTML и CSS на <a href = "https://htmlacademy.ru/" target="_blank">HTML Academy</a> </li>
 					<li> JS на <a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank">Code Academy</a> </li>
 					<li> Git на <a href = "https://try.github.io/levels/1/challenges/1" target="_blank">Try Git</a> </li>
 					<li> React на <a href = "https://facebook.github.io/react/" target="_blank">React Facebook</a> </li>
-					<li> <a href = "https://ru.bem.info/" target = "_blank">БЭМ</a> </li>
+					<li> <a href = "https://ru.bem.info/" target = "_blank"> БЭМ</a> </li>
 				</ul>
 			</div>
-			<div class = "other">
-				<p class = "other_title">Навыки</p>
-				<ul class = "other_description"> 
-					<li>Windows, LINUX</li>
-					<li>MS sOffice, TEX</li>
-					<li>Python, C++</li>
-					<li>HTML, CSS, JS, jQuery</li>
-					<li>Git, Webstorm, React</li>
-					<li>Photoshop, Illustrator</li>
-				</ul>
+			<div class = "learning__english">
+				<p class = "learning__title">Английский</p>
+				<p class = "learning__description">Имеется опыт зарубежных поездок и общения с носителями языка. Свободное чтение и перевод документации.</p>
 			</div>
-			<div class = "english">
-				<p class = "english_title">Английский</p>
-				<p class = "english_description">Имеется опыт зарубежных поездок и общения с носителями языка. Свободное чтение и перевод документации.</p>
+			<div class = "learning__other">
+				<p class = "learning__title">Навыки</p>
+				<table>
+					<tr>
+						<td>Windows, LINUX </td>
+						<td>
+							<div class = "skill-1" id = "skill-1">
+								<div class = "skill-11"></div>
+								<div class = "skill-12"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>MS Office, TEX</td>
+						<td>
+							<div class = "skill-2" id = "skill-2">
+								<div class = "skill-21"></div>
+								<div class = "skill-22"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Python, C++</td>
+						<td>
+							<div class = "skill-3" id = "skill-3">
+								<div class = "skill-31"></div>
+								<div class = "skill-32"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>HTML, CSS, JS, jQuery</td>
+						<td>
+							<div class = "skill-4" id = "skill-4">
+								<div class = "skill-41"></div>
+								<div class = "skill-42"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Git, Webstorm, React</td>
+						<td>
+							<div class = "skill-5" id = "skill-5">
+								<div class = "skill-51"></div>
+								<div class = "skill-52"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Photoshop, Illustrator</td>
+						<td>
+							<div class = "skill-6" id = "skill-6">
+								<div class = "skill-61"></div>
+								<div class = "skill-62"></div>
+							</div>
+						</td>
+					</tr>
+				</table>
 			</div>
+			
 		</section>
 		<section class = "projects" id = "projects">
-			<div class = "project_1">
-				<p class = "project_title">О планетах солнечной системы</p>
+			<div class = "projects__project">
+				<p class = "projects__title">О планетах солнечной системы</p>
 			</div>
-			<div class = "project_2">
-				<p class = "project_title">Apple store</p>
+			<div class = "projects__project">
+				<p class = "projects__title">Apple store</p>
 			</div>
-			<div class = "project_3">
-				<p class = "project_title">Онлайн-тест</p>
+			<div class = "projects__project">
+				<p class = "projects__title">Онлайн-тест</p>
 			</div>
-			<div class = "project_4">
-				<p class = "project_title">Компонентная React-верстка по макету</p>
+			<div class = "projects__project">
+				<p class = "projects__title">Компонентная React-верстка по макету</p>
 			</div>
 		</section>
-		<footer id = "contacts">
+		<footer id = "contacts" class = "footer">
+			<table>
+				<tr>
+					<td rowspan="2">Левашев Сергей</td>
+					<td><img src = "pic/tel.png" width = "44" height = "44"></td>
+					<td><a href = "https://vk.com/s_levashev" target = "_blank"><img src = "pic/vk.png" width = "40" height = "40"></a></td>
+					<td><a href = "https://www.facebook.com/profile.php?id=100011852223553" target = "_blank"><img src = "pic/fb.png" width = "40" height = "40"></a></td>
+				</tr>
+				<tr>
+					<td>8-928-199-777-8</td>
+					<td>Вконтакте</td>
+					<td>facebook</td>
+				</tr>
+			</table>
 		</footer>
 	<body>
 </html>
