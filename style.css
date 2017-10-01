@@ -8,7 +8,6 @@
     	src: url(fonts/HelveticaThin.ttf) format('truetype');
 }
 
-
 @font-face{
    	font-family: HelveticaBI;
    	src: url(fonts/HelveticaBoldItalic.ttf) format('truetype');
@@ -29,7 +28,7 @@ html, body {
 	height: 250px;
 	width: 100%
 	position: absolute;
-	background: url(pic/main_pic2.jpg) 100% 100% no-repeat;
+	background: url(pic/main_pic.jpg) 100% 100% no-repeat;
 	background-size: cover;
 	background-color: #086AAA;
 	z-index: 1;
@@ -202,7 +201,7 @@ html, body {
 }
 
 .skill-1, .skill-2, .skill-3, .skill-4, .skill-5, .skill-6 {
-	/*visibility: hidden;*/
+	visibility: hidden;
 	width: 0px;
 	height: 10px;
 	border: 1px solid #05253A;
