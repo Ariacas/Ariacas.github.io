@@ -306,6 +306,7 @@ html, body {
 .projects__project:hover .project-4 {
 	transition: 0.5s;
 	filter: grayscale(0%) blur(0px);
+	touch-action: auto;
 }
 
 /*For touch screen*/
