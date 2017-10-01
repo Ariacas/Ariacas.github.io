@@ -4,12 +4,14 @@
 		<title>Сергей Левашев</title>
 		<meta charset = "utf-8">
 		<link href = "style.css" rel="stylesheet">
+		<link href = "normalize.css" rel="stylesheet">
+		<link rel="shortcut icon" href="pic/favicon.ico" type="image/x-icon">
 		<script type = "text/javascript" src = "js/jquery-1.11.1.min.js"></script>
 		<script type = "text/javascript" src = "js/script.js"></script>
 	</head>
 	<body>
 		<header class = "header">
-			<div class = "header header__overlay">
+			<div class = "header__overlay">
 				<p class = "header__title">Сергей Левашев</p>
 			</div>
 		</header>
@@ -130,18 +132,13 @@
 				<img class = "project-4" src = "pic/prj_4.png"></img>
 			</div>
 		</section>
-		<footer class = "footer" id = "contacts" >
-			<table>
+		<footer class = "footer" id = "footer">
+			<table class = "footer__contacts">
 				<tr>
-					<td rowspan="2">Левашев Сергей</td>
-					<td><img src = "pic/tel.png" width = "44" height = "44"></td>
-					<td><a href = "https://vk.com/s_levashev" target = "_blank"><img src = "pic/vk.png" width = "40" height = "40"></a></td>
-					<td><a href = "https://www.facebook.com/profile.php?id=100011852223553" target = "_blank"><img src = "pic/fb.png" width = "40" height = "40"></a></td>
-				</tr>
-				<tr>
-					<td>8-928-199-777-8</td>
-					<td>Вконтакте</td>
-					<td>facebook</td>
+					<td class = "contact">Левашев Сергей</td>
+					<td class = "contact-1"><img src = "pic/tel.png" width = "44" height = "44"><br>8-928-199-777-8</td>
+					<td class = "contact-2"><a href = "https://vk.com/s_levashev" target = "_blank"><img src = "pic/vk.png" width = "40" height = "40"></a><br>Вконтакте</td>
+					<td class = "contact-3"><a href = "https://www.facebook.com/profile.php?id=100011852223553" target = "_blank"><img src = "pic/fb.png" width = "40" height = "40"></a><br>facebook</td>
 				</tr>
 			</table>
 		</footer>

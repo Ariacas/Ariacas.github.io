@@ -19,8 +19,6 @@
     	src: url(fonts/Helvetica_Bold.ttf);
 }
 
-
-
 html, body {
     	margin: 0;
     	padding: 0;
@@ -31,9 +29,10 @@ html, body {
 	height: 250px;
 	width: 100%
 	position: absolute;
-	background: url(pic/main_pic.jpg) 100% 100% no-repeat;
+	background: url(pic/main_pic2.jpg) 100% 100% no-repeat;
 	background-size: cover;
 	background-color: #086AAA;
+	z-index: 1;
 }
 
 .header__overlay {
@@ -47,6 +46,7 @@ html, body {
 	left: 0;
 	top:0;
 	opacity: 0.5;
+	z-index: 2;
 }
 
 .header__title{ 
@@ -55,7 +55,6 @@ html, body {
 	font-size: 80px;
 	font-style: normal;
 	font-family: HelveticaT;
-	
 }
 
 .menu {
@@ -88,8 +87,13 @@ html, body {
 	color: #05253A;
 	background-color: #FFFFFF;
 	transition: 0.5s;
-
 }
+
+.menu a:not(:hover) {
+	color: #FFFFFF;
+	transition: 0.5s;
+}
+
 
 .byography, 
 .learning, 
@@ -119,7 +123,7 @@ html, body {
 	text-align: center;
 	background-color: #565656;
   	color: transparent;
-  	text-shadow: 0px 2px 3px rgba(255,255,255,0.6);
+  	text-shadow: 0px 1px 5px rgba(255,255,255,0.6);
   	-webkit-background-clip: text;
        -moz-background-clip: text;
             background-clip: text;
@@ -194,24 +198,20 @@ html, body {
 }
 
 .learning__other table tr td{
+	width: 50%;
 	padding: 5px;
 }
 
 .skill-1, .skill-2, .skill-3, .skill-4, .skill-5, .skill-6 {
-	width: 230px;
+	/*visibility: hidden;*/
+	width: 0px;
 	height: 10px;
 	border: 1px solid #05253A;
 	border-radius: 3px;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
-	transition: transform 0.8s;
 }
-
-.skill-1:hover {
-	transform: translate(10px, 0px);
-}
-
 
 .skill-11, .skill-21, .skill-31, .skill-41, .skill-51, .skill-61 {
 	background-color: #05253A;
@@ -270,6 +270,10 @@ html, body {
 	width: 26%;
 }
 
+.projects {
+	opacity: 0;
+}
+
 .projects__project {
 	margin: 30px;
 	padding: 10px;
@@ -287,7 +291,7 @@ html, body {
 	font-style: normal;
 }
 
-.project-1, .project-2, .project-4 {
+.project-1, .project-2, .project-3, .project-4 {
 	width: 350px;
 	height: 300px;
 	pointer-events: none;
@@ -296,13 +300,6 @@ html, body {
 	filter: grayscale(100%) blur(5px);
 }
 
-.project-3 {
-	width: 400px;
-	height: 300px;
-	pointer-events: none;
-	user-select: none;
-	filter: grayscale(100%) blur(5px);
-}
 
 .projects__project:hover .project-1,
 .projects__project:hover .project-2,
@@ -311,8 +308,25 @@ html, body {
 	transition: 0.5s;
 	filter: grayscale(0%) blur(0px);
 }
-	
 
+/*For touch screen*/
+.projects__project:active .project-1,
+.projects__project:active .project-2,
+.projects__project:active .project-3,
+.projects__project:active .project-4 {
+	transition: 0.5s;
+	filter: grayscale(0%) blur(0px);
+}
+
+.projects__project:not(:hover) .project-1,
+.projects__project:not(:hover) .project-2,
+.projects__project:not(:hover) .project-3,
+.projects__project:not(:hover) .project-4 {
+	transition: 0.5s;
+	filter: grayscale(100%) blur(5px);
+}
+
+	
 .footer {
 	display: flex;
 	justify-content: center;
@@ -322,17 +336,20 @@ html, body {
 	background-color: #05253A;
 }
 
-
-.footer table {
+.footer__contacts {
 	width: 70%;
 }
 
-.footer table tr td{
+.contact,
+.contact-1,
+.contact-2,
+.contact-3{
 	color: white;
 	font-family: HelveticaR;
 	font-size: 18px;
 	text-align: center;
-	padding: 5px;
+	line-height: 1.5;
+	opacity: 0;
 }
 
 
