@@ -9,6 +9,11 @@
 		var id  = $(this).attr('href'),
 
 		top = $(id).offset().top;
+
+		if (id = "#nav") {
+			$('body, html').animate({scrollTop: top}, timeAnimate);
+		}
+		
 		
 		if (id == "#learning") {
 			$('body, html').animate({scrollTop: top}, timeAnimate);
@@ -23,7 +28,7 @@
 			}, timeAnimate);
 		}
 
-		if (id == "#footer") {
+		if (id == "#contacts") {
 			$('body, html').animate({scrollTop: top}, timeAnimate );
 
 			setTimeout(function(){
